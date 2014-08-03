@@ -1,0 +1,41 @@
+# sh alises :: public
+
+# General
+# ===
+alias be="bundle exec"
+alias c="clear"
+alias ll="ls -la"
+alias lr="ls -ltra"
+alias esstart="echo Starting es; elasticsearch -d es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+alias esstop="curl -XPOST 'http://localhost:9200/_shutdown'"
+alias f="foreman"
+alias fs="foreman start"
+alias h="heroku"
+# alias gemsize=rubygemsize
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="echo Stopping postgres; pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pumapls="puma -e development -t 1:1 -p 3000 --pidfile tmp/pids/puma.pid"
+alias mysqlstart="mysql.server start"
+alias mysqlstop="mysql.server stop"
+alias redisstart="echo Starting redis; redis-server ~/.redis/redis.conf"
+alias redisstop="echo Stopping redis; redis-cli shutdown"
+alias s="screen"
+
+# git
+# ===
+alias g="git"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gco="git checkout"
+alias gd="git diff"
+alias gdlist="git diff master --stat"
+alias gf="git fetch"
+alias gg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold green)%h%C(reset) %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gl="git log"
+alias glist="git for-each-ref --format='[%(authordate:short)] %(refname:short) :: %(subject)' --sort=authordate refs/heads/"
+alias gm="git mergetool -t opendiff"
+alias gp="git pull"
+alias gr="git reset --soft HEAD~1; echo 'HEAD is now at: $(git log -1 --oneline)'; git status"
+alias greset="git add . && git stash && git stash drop"
+alias gs="git status"

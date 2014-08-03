@@ -1,0 +1,77 @@
+
+# ===============================================================
+# ESCAPE - the COMMAND CHARACTER
+# ===============================================================
+# escape ^aa  # default
+# escape ^pp  # suggested binding for emacs users
+# escape `    # backtick
+#
+escape ^@@
+
+
+# ===============================================================
+# VARIABLES - Boolean values (on/off)
+# ===============================================================
+# detach on hangup
+#  autodetach            on              # default: on
+#  crlf                  off             # default: off
+#  deflogin              off             # default: on
+# defsilence            off             # default: off
+# hardcopy_append       on              # default: off
+#  hardcopy_append       off             # default: off
+# nethack               on              # default: off
+# don't display the copyright page
+  startup_message       off             # default: on
+# no annoying audible bell, please
+  vbell                 on
+
+
+# if we accidentally hangup, don't be all attached when we come back. 
+autodetach on
+
+# more scrollbacks!
+defscrollback 10000
+
+# nodelay copy mode
+msgminwait 0
+
+# disable use of the "alternate" terminal
+# thus allowing scrollbars to function as normal in
+# many terminal emulators! <3 it
+termcapinfo xterm* ti@:te@
+
+# have screen update terminal emulators titlebar
+termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^Et) | $USER@^EH"
+
+# but dont print i.e. "bell in window 0" status craps
+#hardstatus off
+
+#shelltitle "$ |bash"
+
+term screen-256color
+
+
+screen 1 zsh
+title '~'
+screen 2 zsh
+title '~'
+screen 3 zsh
+title '~'
+screen 4 zsh
+title '~'
+screen 5 zsh
+title '~'
+select 1
+
+backtick 1 60 60 $HOME/.screenshit/get_freemem
+backtick 2 60 60 $HOME/.screenshit/get_freedisk
+backtick 3 60 60 $HOME/.screenshit/get_cpu
+
+hardstatus alwayslastline
+hardstatus string '%{= kG}%= %{=kw}%?%-Lw%?%{r}(%{W}%n:%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}[ %{G}%l | %{G}%2`%{g}G ]'
+
+defflow off
+
+#rvm needs this
+shell -${SHELL}

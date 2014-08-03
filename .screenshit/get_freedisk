@@ -1,0 +1,4 @@
+#!/bin/bash
+free_mb=$(df -Bm | grep dev -m 1 | awk '{print $4}' | sed 's/M$//')
+factor_mb=1024
+bc <<< "scale=1; $free_mb/$factor_mb"

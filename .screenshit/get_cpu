@@ -1,0 +1,2 @@
+#!/bin/bash
+iostat -dC | sed -n 3p | awk '{print $6}'
