@@ -6,6 +6,7 @@
 # escape ^pp  # suggested binding for emacs users
 # escape `    # backtick
 #
+# ctrl
 escape ^@@
 
 
@@ -74,4 +75,4 @@ hardstatus string '%{= kG}%= %{=kw}%?%-Lw%?%{r}(%{W}%n:%f%t%?(%u)%?%{r})%{w}%?%+
 defflow off
 
 #rvm needs this
-shell -${SHELL}
+# shell -${SHELL}

@@ -45,9 +45,10 @@ ZSH_THEME="cute"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew docker encode64 gem gitfast rvm npm osx rails screen urltools wd)
+plugins=(autojump brew docker encode64 gem gitfast npm osx screen urltools wd)
 
 source $ZSH/oh-my-zsh.sh
+unsetopt AUTO_CD
 
 # Keypad
 # 0 . Enter
@@ -102,6 +103,7 @@ bindkey -s "^[Oo" "/"
 
 # Use GNU coreutils
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # apple + java poopy
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
@@ -120,6 +122,7 @@ source $HOME/.sh_aliases
 source $HOME/.sh_aliases_private
 
 # RVM
-PATH=$PATH:$HOME/.rvm/scripts/rvm
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
