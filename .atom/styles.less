@@ -1,0 +1,232 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+// Editor General
+
+.editor .selection .region {
+  background-color: rgba(0, 131, 54, 0.33);
+}
+
+.editor .gutter {
+  background: rgb(32, 32, 32) !important;
+  .line-numbers {
+    color: #888;
+  }
+}
+
+.editor .line-number.cursor-line-no-selection,
+.editor .gutter .cursor-line {
+  color: #80aa8c;
+  background-color: #0a472d;
+}
+
+.editor-colors, .results-view {
+  background-color: #1B1B1B !important;
+}
+
+.editor .cursor {
+  position: absolute;
+  border: 1px solid rgba(244,100,122, 0.95);
+  background-color: rgba(244, 100, 122, 0.42);
+}
+
+.editor.is-focused .cursors.blink-off .cursor {
+  opacity: 1;
+}
+
+.feedback-status {
+  display: none;
+}
+
+.list-group .selected:before, .list-tree .selected:before {
+  background-color: #3085C7;
+}
+
+.tree-view > li.selected:first-child:before {
+  height: 23px;
+}
+
+.editor .indent-guide {
+  color: rgba(255, 255, 255, 0.24);
+  &:nth-child(even) {
+    color: rgba(255, 200, 255, 0.24);
+  }
+  &:nth-child(odd) {
+    color: rgba(255, 150, 255, 0.125);
+  }
+}
+
+.pane {
+  opacity: 1.00 !important;
+}
+
+
+/************************
+nth-child mixin
+************************/
+
+// $max-count is the maximum amount of colors you'll want
+// $color-frequency is how intense you want the color change to be. Lower # = more intense changes
+//
+// .color-me(@max_count; @color_frq) {
+//   $color: 360/$max_count;
+//
+//   .loop
+// }
+//
+// @mixin colors($max_count, $color_frequency) {
+//   $color: 360/$max_count;
+//
+//   @for $i from 1 through $max_count {
+//     &:nth-child(#{$max_count}n + #{$i}) {
+//       // Modify 's' and 'l' percentages to match color scheme you want
+//       background: hsl(($i - 1)*($color / $color-frequency), 80%, 60%);
+//     }
+//   }
+// }
+
+// Editor Tabs
+
+.tab-bar .tab {
+  height: 30px !important;
+  line-height: 28px !important;
+  border-bottom-width: 4px;
+  .close-icon {
+    line-height: auto;
+    color: #777;
+  }
+  .title {
+    margin-top: 0 !important;
+  }
+  &:before {
+    // width: 10px !important;
+    height: 30px !important;
+  }
+}
+
+
+.tab-bar {
+  border-bottom: 2px solid #1b1b1b;
+}
+
+.panes .pane:not(.active) .tab-bar .tab.active {
+  color: #ccc;
+  border-bottom-color: #3C4E5C;
+  &:before {
+    border-bottom-color: #3C4E5C;
+  }
+}
+
+
+// Tree View
+
+.tree-view {
+  font-family: "Fira Sans";
+
+  .name.icon.icon-file-directory {
+    font-weight: normal;
+  }
+
+  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+    height: 18px;
+  }
+
+  .list-group .selected:before, .list-tree .selected:before {
+    margin-top: -1px;
+    height: 17px;
+  }
+
+  .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+    padding-left: 8px;
+  }
+
+  .tree-view-scroller {
+    padding-top: 5px;
+  }
+
+}
+
+
+.tree-view-resizer {
+  width: 100% !important;
+
+.tree-view-resize-handle {
+    background: #202020;
+  }
+}
+
+
+// Panels
+
+.settings-view {
+  .text {
+    color: #D8D8D8;
+  }
+  .section .section-heading {
+    color: #eee !important;
+  }
+  .panels {
+    color: #eee;
+    background: #333;
+  }
+  .editor-container .editor.mini {
+    color: #eee;
+    background: #444;
+    &.is-focused {
+      color: #eee;
+      background: #444;
+    }
+  }
+
+  .form-control {
+    color: #ececec;
+    background-color: #000;
+    border-color: #7c7c7c;
+  }
+
+  .settings-panel label {
+    color: #ddd;
+  }
+
+  .config-menu {
+    background-color: #222222;
+
+    .nav > li > a {
+      color: #bbb;
+      &:hover {
+        color: #eee;
+        background-color: #444;
+      }
+    }
+    .nav > li.active > a {
+
+      &:hover {
+        color: #eee;
+        background-color: #3f99d3;
+      }
+    }
+  }
+}
+
+.list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+  line-height: 13px;
+}
+
+.list-group .selected:before, .list-tree .selected:before {
+  height: 17px;
+}
+
+.results-view .path-details.list-item {
+  color: #47D379 !important;
+}
+
+.results-view .list-group .selected:before, .list-tree .selected:before {
+  background-color: #286799 !important;
+}

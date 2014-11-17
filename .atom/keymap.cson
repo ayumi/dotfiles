@@ -1,0 +1,59 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# '.workspace':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+'.workspace .editor:not(.mini)':
+  'cmd-enter': 'editor:newline-above'
+  'shift-enter': 'editor:newline-above'
+  'cmd-shift-down': 'editor:move-line-down'
+  'cmd-shift-up': 'editor:move-line-up'
+  'cmd-[': 'unset!'
+  'cmd-]': 'unset!'
+  'ctrl-z': 'last-cursor-position:previous'
+  'ctrl-x': 'last-cursor-position:next'
+  'alt--': 'last-cursor-position:previous'
+  'alt-=': 'last-cursor-position:next'
+  'alt-h': 'editor:move-to-beginning-of-word'
+  'cmd-h': 'editor:move-to-beginning-of-word'
+  'alt-l': 'editor:move-to-end-of-word'
+  'cmd-l': 'editor:move-to-end-of-word'
+  'alt-j': 'core:move-down'
+  'cmd-j': 'core:move-down'
+  'alt-k': 'core:move-up'
+  'cmd-k': 'core:move-up'
+  'tab': 'editor:indent-selected-rows'
+  'alt-tab': 'editor:indent'
+
+'.workspace':
+  'cmd-n': 'fancy-new-file:toggle'
+
+
+'body':
+  'alt-w': 'window:focus-next-pane'
+  'ctrl-w': 'window:focus-next-pane'
+  'ctrl-v': 'pane:split-right'
+  'ctrl-s': 'pane:split-down'
+  'cmd-[': 'pane:show-previous-item'
+  'cmd-]': 'pane:show-next-item'
+
+'.platform-darwin':
+  'cmd-shift-n': 'fuzzy-finder:toggle-file-finder'
+  'alt-1':       'tree-view:toggle'
+
+'.platform-darwin .editor':
+  'ctrl-r': 'symbols-view:go-to-declaration'
