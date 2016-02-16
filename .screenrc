@@ -65,9 +65,9 @@ screen 5 zsh
 title '~'
 select 1
 
-backtick 1 60 60 $HOME/.screenshit/get_freemem
-backtick 2 60 60 $HOME/.screenshit/get_freedisk
-backtick 3 60 60 $HOME/.screenshit/get_cpu
+backtick 1 60 60 $HOME/.screen/get_freemem
+backtick 2 60 60 $HOME/.screen/get_freedisk
+backtick 3 60 60 $HOME/.screen/get_cpu
 
 hardstatus alwayslastline
 hardstatus string '%{= kG}%= %{=kw}%?%-Lw%?%{r}(%{W}%n:%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}[ %{G}%l | %{G}%2`%{g}G ]'
