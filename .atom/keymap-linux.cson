@@ -1,0 +1,50 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':,
+#   'enter': 'editor:newline'
+#
+# '.workspace':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#1
+
+'.workspace .editor':
+  'alt-enter': 'editor:newline-above'
+  'shift-enter': 'editor:newline-above'
+  'ctrl-shift-down': 'editor:move-line-down'
+  'ctrl-shift-up': 'editor:move-line-up'
+  'alt-shift-down': 'editor:move-line-down'
+  'alt-shift-up': 'editor:move-line-up'
+  #'ctrl-z': 'last-cursor-position:previous'
+  #'ctrl-x': 'last-cursor-position:next'
+  'tab': 'editor:indent-selected-rows'
+  'ctrl-tab': 'editor:indent'
+
+'body':
+  'cmd-left': 'editor:move-to-first-character-of-line'
+  'cmd-right': 'editor:move-to-end-of-line'
+  'shift-cmd-left': 'editor:select-to-first-character-of-line'
+  'shift-cmd-right': 'editor:select-to-end-of-line'
+  # 'alt-left': 'editor:move-to-beginning-of-word'
+  # 'alt-right': 'editor:move-to-end-of-word'
+  'ctrl-w': 'core:close'
+  'alt-w': 'window:focus-next-pane'
+  'alt-s': 'pane:split-right'
+  'alt-a': 'pane:split-down'
+  'alt-[': 'pane:show-previous-item'
+  'alt-]': 'pane:show-next-item'
+  'ctrl-shift-n': 'fuzzy-finder:toggle-file -finder'
+  'alt-1': 'tree-view:toggle'
+  'ctrl-n': 'tree-view:add-file'
+
+'.platform-linux':
+  'alt-t': 'fuzzy-finder:toggle-file-finder'
