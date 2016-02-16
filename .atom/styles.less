@@ -11,13 +11,18 @@
 // Editor General
 
 .editor .selection .region {
-  background-color: rgba(0, 131, 54, 0.33);
+  background-color: rgba(0, 131, 54, 0.33) !important;
 }
 
-.editor .gutter {
-  background: rgb(32, 32, 32) !important;
+.editor {
+  background: rgb(10, 10, 10) !important;
+}
+
+.gutter {
+  background-color: rgb(20, 20, 20) !important;
   .line-numbers {
-    color: #888;
+    background-color: rgb(20, 20, 20) !important;
+    color: rgb(50, 50, 50) !important;
   }
 }
 
@@ -98,6 +103,7 @@ nth-child mixin
   height: 30px !important;
   line-height: 28px !important;
   border-bottom-width: 4px;
+  min-width: 0;
   .close-icon {
     line-height: auto;
     color: #777;
@@ -155,7 +161,7 @@ nth-child mixin
 
 
 .tree-view-resizer {
-  width: 100% !important;
+  // width: 100% !important;
 
 .tree-view-resize-handle {
     background: #202020;
@@ -229,4 +235,14 @@ nth-child mixin
 
 .results-view .list-group .selected:before, .list-tree .selected:before {
   background-color: #286799 !important;
+}
+
+.indent-guide-improved {
+  // background-color: rgb(61, 41, 94);
+  &.indent-guide-stack {
+    background-color: rgb(94, 41, 84);
+    &.indent-guide-active {
+      background-color: rgb(215, 71, 158);
+    }
+  }
 }

@@ -1,0 +1,75 @@
+"*":
+  autosave:
+    enabled: true
+  blame: {}
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "status-bar"
+      "advanced-new-file"
+      "fancy-new-file"
+      "autocomplete-atom-api"
+      "autocomplete-snippets"
+      "autocomplete-plus"
+      "autocomplete-html"
+      "autocomplete-css"
+      "git-blame"
+      "remember-session"
+      "remember-window"
+      "goto"
+      "linter-rubocop"
+      "go-plus"
+      "background-tips"
+      "rainbow-selection"
+      "swackets"
+    ]
+    themes: [
+      "seti-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 12
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "f1c26ec2-08ea-658c-5088-57d8474c304a"
+  "git-blame": {}
+  "git-blame-plus": {}
+  linter:
+    lintOnChangeInterval: 2000
+    showErrorInline: false
+    showErrorPanel: false
+    showErrorTabLine: true
+    statusBar: "None"
+  "linter-eslint": {}
+  "linter-jshint": {}
+  "linter-rubocop": {}
+  "linter-ruby": {}
+  metrics:
+    userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
+  "remember-session":
+    height: 877
+    path: ""
+    selectedTab: ""
+    tabs: ""
+    width: 1203
+    x: 88
+    y: 23
+  "remember-window":
+    height: 877
+    width: 1203
+    x: 88
+    y: 23
+  rspec:
+    command: "zeus rspec"
+  swackets: {}
+  tabs:
+    enableVcsColoring: true
+    tabScrolling: true
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
