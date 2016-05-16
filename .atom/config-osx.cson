@@ -14,14 +14,20 @@
       "autocomplete-html"
       "autocomplete-css"
       "git-blame"
-      "remember-session"
       "remember-window"
       "goto"
       "linter-rubocop"
       "go-plus"
       "background-tips"
-      "rainbow-selection"
       "swackets"
+      "rainbow-selection"
+      "linter-jscs"
+      "language-gfm"
+      "markdown-writer"
+    ]
+    ignoredNames: [
+      "spec/fixtures"
+      "fixtures"
     ]
     themes: [
       "seti-ui"
@@ -68,7 +74,8 @@
   tabs:
     enableVcsColoring: true
     tabScrolling: true
-  "tree-view": {}
+  "tree-view":
+    focusOnReveal: false
   welcome:
     showOnStartup: false
   whitespace:

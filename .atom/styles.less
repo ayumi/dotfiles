@@ -8,6 +8,10 @@
  * http://www.lesscss.org
  */
 
+* {
+  font-family: 'Fira Sans' !important;
+}
+
 // Editor General
 
 .editor .selection .region {
@@ -16,6 +20,7 @@
 
 .editor {
   background: rgb(10, 10, 10) !important;
+  font-family: 'Source Code Pro' !important;
 }
 
 .gutter {
@@ -99,21 +104,30 @@ nth-child mixin
 
 // Editor Tabs
 
+.tab-bar {
+  height: auto !important;
+}
+
 .tab-bar .tab {
+  border-bottom-width: 4px;
   height: 30px !important;
   line-height: 28px !important;
-  border-bottom-width: 4px;
   min-width: 0;
+  padding: 0 !important;
+  transition: none !important;
   .close-icon {
-    line-height: auto;
     color: #777;
+    line-height: auto;
+    top: 0 !important;
+    right: 5px !important;
   }
   .title {
     margin-top: 0 !important;
   }
-  &:before {
+  .title:before {
     // width: 10px !important;
-    height: 30px !important;
+    height: 28px !important;
+    line-height: 28px !important;
   }
 }
 
@@ -133,28 +147,34 @@ nth-child mixin
 
 // Tree View
 
+atom-panel-container .project-root > .header {
+  font-size: 14px;
+  height: 30px;
+  padding: 0;
+}
+
+
 .tree-view {
-  font-family: "Fira Sans";
-
-  .name.icon.icon-file-directory {
-    font-weight: normal;
-  }
-
-  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+  font-size: 12px;
+  // letter-spacing: 0.05em;
+  .list-item {
     height: 18px;
+    line-height: 18px !important;
   }
-
-  .list-group .selected:before, .list-tree .selected:before {
-    margin-top: -1px;
-    height: 17px;
-  }
-
-  .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
-    padding-left: 8px;
-  }
-
-  .tree-view-scroller {
-    padding-top: 5px;
+  .entries.list-tree {
+    .directory.entry.list-nested-item,
+    .file.entry.list-item {
+      &.selected::before {
+        height: 18px !important;
+        margin-top: 0 !important;
+      }
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    span.icon-file-text {
+      position: relative;
+      top: -8px !important;
+    }
   }
 
 }
@@ -221,12 +241,44 @@ nth-child mixin
   }
 }
 
-.list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
-  line-height: 13px;
-}
+// .list-group .selected:before, .list-tree .selected:before {
+//   height: 17px;
+// }
 
-.list-group .selected:before, .list-tree .selected:before {
-  height: 17px;
+// Search
+// ===
+
+.preview-pane {
+  .panel-heading {
+    padding: 0 5px !important;
+    .preview-count {
+      font-size: 14px !important;
+      font-weight: 300 !important;
+      padding: 5px 0 !important;
+    }
+  }
+  .results-view {
+    padding: 0 5px;
+    & > li {
+      margin-bottom: 0 !important;
+    }
+    .path-details * {
+      font-size: 12px !important;
+    }
+    .list-item {
+      padding: 0 5px !important;
+    }
+    .search-result {
+      &.list-item {
+        height: 20px;
+        line-height: 20px;
+      }
+      & * {
+        font-family: 'Source Code Pro' !important;
+        letter-spacing: -0.05em;
+      }
+    }
+  }
 }
 
 .results-view .path-details.list-item {
