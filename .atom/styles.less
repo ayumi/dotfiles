@@ -289,6 +289,32 @@ atom-panel-container .project-root > .header {
   background-color: #286799 !important;
 }
 
+
+// File file finder
+// ===
+
+.fuzzy-finder {
+  .list-group li {
+    padding: 3px 0 !important;
+  }
+  .two-lines {
+    .primary-line {
+      &::before {
+        float: left;
+        width: 18px;
+      }
+    }
+    .primary-line, .secondary-line {
+      height: 20px;
+      line-height: 20px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      padding: 0 !important;
+    }
+    padding: 0;
+  }
+}
+
 .indent-guide-improved {
   // background-color: rgb(61, 41, 94);
   &.indent-guide-stack {
