@@ -34,6 +34,7 @@
       "monokai"
     ]
   editor:
+    backUpBeforeSaving: true
     fontFamily: "Source Code Pro"
     fontSize: 12
     invisibles: {}
@@ -70,6 +71,10 @@
     y: 23
   rspec:
     command: "zeus rspec"
+  "seti-ui":
+    compactView: true
+    disableAnimations: true
+    themeColor: "Pink"
   swackets: {}
   tabs:
     enableVcsColoring: true

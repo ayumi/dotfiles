@@ -56,7 +56,7 @@
 }
 
 .list-group .selected:before, .list-tree .selected:before {
-  background-color: #3085C7;
+  // background-color: #3085C7;
 }
 
 .tree-view > li.selected:first-child:before {
@@ -75,6 +75,12 @@
 
 .pane {
   opacity: 1.00 !important;
+}
+
+.project-find atom-text-editor[mini] .text.plain, .find-and-replace atom-text-editor[mini] .text.plain, .project-find atom-text-editor[mini]::shadow .text.plain, .find-and-replace atom-text-editor[mini]::shadow .text.plain,
+atom-panel-container.modal atom-panel.modal atom-text-editor[mini] .text.plain, atom-panel-container.modal atom-panel.modal atom-text-editor[mini]::shadow .text.plain {
+  // color: #3DFF97;
+  color: hsla(341,100%,70%,1);
 }
 
 
@@ -110,8 +116,8 @@ nth-child mixin
 
 .tab-bar .tab {
   border-bottom-width: 4px;
-  height: 30px !important;
-  line-height: 28px !important;
+  height: 26px !important;
+  line-height: 26px !important;
   min-width: 0;
   padding: 0 !important;
   transition: none !important;
@@ -121,13 +127,19 @@ nth-child mixin
     top: 0 !important;
     right: 5px !important;
   }
+  &.modified .close-icon {
+    top: 9px !important;
+    right: 9px !important;
+  }
   .title {
+    font-size: 12px;
+    letter-spacing: 0;
     margin-top: 0 !important;
   }
   .title:before {
     // width: 10px !important;
-    height: 28px !important;
-    line-height: 28px !important;
+    height: 26px !important;
+    line-height: 26px !important;
   }
 }
 
@@ -147,18 +159,26 @@ nth-child mixin
 
 // Tree View
 
-atom-panel-container .project-root > .header {
-  font-size: 14px;
-  height: 30px;
-  padding: 0;
+.project-root > .header {
+  & > .name {
+    line-height: 26px !important;
+    position: relative;
+    top: -2px;
+    // margin-top: -10px !important;
+  }
+  font-size: 12px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  padding: 0 !important;
+  border-bottom: 2px solid hsla(341,0%,40%,1);
 }
 
 
 .tree-view {
   font-size: 12px;
-  // letter-spacing: 0.05em;
   .list-item {
     height: 18px;
+    letter-spacing: 0;
     line-height: 18px !important;
   }
   .entries.list-tree {
@@ -172,13 +192,17 @@ atom-panel-container .project-root > .header {
       padding-bottom: 0 !important;
     }
     span.icon-file-text {
+      letter-spacing: 0;
       position: relative;
       top: -8px !important;
     }
   }
-
 }
 
+.results-view .list-group .selected:before,
+.list-group .selected::before, .list-tree .selected::before {
+  background-color: hsla(341,40%,40%,1) !important;
+}
 
 .tree-view-resizer {
   // width: 100% !important;
@@ -284,10 +308,10 @@ atom-panel-container .project-root > .header {
 .results-view .path-details.list-item {
   color: #47D379 !important;
 }
-
-.results-view .list-group .selected:before, .list-tree .selected:before {
-  background-color: #286799 !important;
-}
+//
+// .results-view .list-group .selected:before, .list-tree .selected:before {
+//   background-color: #286799 !important;
+// }
 
 
 // File file finder
