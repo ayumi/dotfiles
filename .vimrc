@@ -14,5 +14,10 @@ set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
 
-" DON'T PUT SHIT AFTER THIS
-imap ii <Esc>
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+else
+  set clipboard=unnamed
+endif
+
+imap jj <Esc>
