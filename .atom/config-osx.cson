@@ -5,7 +5,6 @@
   core:
     audioBeep: false
     disabledPackages: [
-      "status-bar"
       "advanced-new-file"
       "fancy-new-file"
       "autocomplete-atom-api"
@@ -16,14 +15,26 @@
       "git-blame"
       "remember-window"
       "goto"
-      "linter-rubocop"
       "go-plus"
       "background-tips"
-      "swackets"
       "rainbow-selection"
       "linter-jscs"
       "language-gfm"
       "markdown-writer"
+      "spell-check"
+      "rspec"
+      "rainbow-tabs"
+      "linter-ruby"
+      "linter-jshint"
+      "metrics"
+      "archive-view"
+      "autoflow"
+      "command-palette"
+      "keybinding-resolver"
+      "language-csharp"
+      "welcome"
+      "color-picker"
+      "swackets"
     ]
     ignoredNames: [
       "spec/fixtures"
@@ -42,15 +53,20 @@
     softWrap: true
   "exception-reporting":
     userId: "f1c26ec2-08ea-658c-5088-57d8474c304a"
+  "find-and-replace":
+    scrollToResultOnLiveSearch: true
   "git-blame": {}
   "git-blame-plus": {}
   linter:
+    displayLinterStatus: false
+    gutterEnabled: false
     lintOnChangeInterval: 2000
     showErrorInline: false
-    showErrorPanel: false
     showErrorTabLine: true
+    showErrorTabProject: false
     statusBar: "None"
-  "linter-eslint": {}
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
   "linter-jshint": {}
   "linter-rubocop": {}
   "linter-ruby": {}
@@ -74,8 +90,21 @@
   "seti-ui":
     compactView: true
     disableAnimations: true
+    font: "Default Atom Font"
     themeColor: "Pink"
-  swackets: {}
+  "status-bar":
+    cursorPositionFormat: " "
+    selectionCountFormat: " "
+  swackets:
+    colorParens: true
+    colorSquareBrackets: true
+    colors: [
+      "#AAFF00"
+      "#FFAA00"
+      "#FF00AA"
+      "#AA00FF"
+      "#00AAFF"
+    ]
   tabs:
     enableVcsColoring: true
     tabScrolling: true
