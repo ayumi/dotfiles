@@ -45,7 +45,7 @@ ZSH_THEME="cute"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew docker encode64 gem gitfast npm osx screen urltools wd)
+plugins=(screen wd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt AUTO_CD
@@ -83,6 +83,7 @@ bindkey -s "^[Oo" "/"
 #bindkey -M vicmd '/' history-incremental-search-forward
 
 #export PATH="/Users/ayu/.rvm/gems/ruby-2.1.2/bin:/Users/ayu/.rvm/gems/ruby-2.1.2@global/bin:/Users/ayu/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ayu/.rvm/bin"
+# export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -94,6 +95,34 @@ bindkey -s "^[Oo" "/"
 # else
 #   export EDITOR='mvim'
 # fi
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+# Enable vim mode
+#bindkey -v
+#bindkey -M viins 'jj' vi-cmd-mode
+#bindkey -M vicmd '/' history-incremental-search-backward
+#bindkey -M vicmd '?' history-incremental-search-forward
+
+# vim mode status indicators
+#RPS1="--INSERT--"
+function zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/}/(main|viins)/-- INSERT --}"
+    zle reset-prompt
+}
+#zle -N zle-keymap-select
+
+# Colorize man pages
+man() {
+	env \
+		LESS_TERMCAP_md=$'\e[1;33m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[1;40;96m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[1;35m' \
+			man "$@"
+}
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -126,3 +155,44 @@ source $HOME/.sh_aliases_private
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Golang
+export GOPATH="$HOME/go"
+export PATH="$PATH:$HOME/go/bin"
+
+# fleet
+export FLEETCTL_ENDPOINT="http://127.0.0.1:4001"
+
+# cert.pem file for openssl
+# export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
+
+
+export PATH=/Users/ayu/torch/install/bin:$PATH  # Added automatically by torch-dist
+export LD_LIBRARY_PATH=/Users/ayu/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/Users/ayu/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
+
+# perl lol
+# source ~/perl5/perlbrew/etc/bashrc
+
+# docker
+#export DOCKER_TLS_VERIFY="1"
+#export DOCKER_HOST="tcp://192.168.99.100:2376"
+#export DOCKER_CERT_PATH="/Users/ayu/.docker/machine/machines/alice"
+#export DOCKER_MACHINE_NAME="alice"
+
+# fucking homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/ayu/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+#source '/Users/ayu/google-cloud-sdk/completion.zsh.inc'
+
+export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+source '/Users/ayu/.nvm/nvm.sh'
+
+# Docker version manager
+[[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
