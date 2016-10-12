@@ -18,7 +18,6 @@
       "go-plus"
       "background-tips"
       "rainbow-selection"
-      "linter-jscs"
       "language-gfm"
       "markdown-writer"
       "spell-check"
@@ -35,6 +34,10 @@
       "welcome"
       "color-picker"
       "swackets"
+      "linter-jscs"
+      "jslint"
+      "language-babel"
+      "linter-eslint"
     ]
     ignoredNames: [
       "spec/fixtures"
@@ -42,7 +45,7 @@
     ]
     themes: [
       "seti-ui"
-      "monokai"
+      "tinacious-design-syntax"
     ]
   editor:
     backUpBeforeSaving: true
@@ -57,8 +60,12 @@
     scrollToResultOnLiveSearch: true
   "git-blame": {}
   "git-blame-plus": {}
+  jslint:
+    jslintVersion: "es6"
+    validateOnChange: true
   linter:
     displayLinterStatus: false
+    errorPanelHeight: 24
     gutterEnabled: false
     lintOnChangeInterval: 2000
     showErrorInline: false
@@ -67,11 +74,18 @@
     statusBar: "None"
   "linter-eslint":
     disableWhenNoEslintConfig: false
+    eslintrcPath: "/users/ayu/.eslintrc"
+    globalNodePath: "/Users/ayu/.nvm/versions/node/v6.2.1"
+    useGlobalEslint: true
+  "linter-jscs": {}
   "linter-jshint": {}
-  "linter-rubocop": {}
+  "linter-rubocop":
+    command: "/usr/local/bin/rubocop"
   "linter-ruby": {}
   metrics:
     userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
+  react:
+    enabledForAllJavascriptFiles: true
   "remember-session":
     height: 877
     path: ""
@@ -87,6 +101,9 @@
     y: 23
   rspec:
     command: "zeus rspec"
+  "seti-syntax":
+    dynamicColor: false
+    themeColor: "Green"
   "seti-ui":
     compactView: true
     disableAnimations: true
