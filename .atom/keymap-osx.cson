@@ -40,7 +40,7 @@
   'alt-tab': 'editor:indent'
 
 '.workspace':
-  'cmd-n': 'fancy-new-file:toggle'
+  'cmd-n': 'advanced-open-file:toggle'
 
 
 'body':
@@ -57,3 +57,6 @@
 
 '.platform-darwin .editor':
   'ctrl-r': 'symbols-view:go-to-declaration'
+  'alt-shift-up': 'change-case:camel'
+  'alt-up': 'change-case:constant'
+  'alt-down': 'change-case:snake'

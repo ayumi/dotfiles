@@ -1,11 +1,19 @@
 "*":
+  "":
+    slim:
+      text:
+        whitespace:
+          removeTrailingWhitespace: true
+  "advanced-open-file": {}
   autosave:
     enabled: true
   blame: {}
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
   core:
     audioBeep: false
     disabledPackages: [
-      "advanced-new-file"
       "fancy-new-file"
       "autocomplete-atom-api"
       "autocomplete-snippets"
@@ -24,7 +32,6 @@
       "rspec"
       "rainbow-tabs"
       "linter-ruby"
-      "linter-jshint"
       "metrics"
       "archive-view"
       "autoflow"
@@ -35,9 +42,10 @@
       "color-picker"
       "swackets"
       "linter-jscs"
-      "jslint"
       "language-babel"
-      "linter-eslint"
+      "jslint"
+      "linter-jshint"
+      "language-objective-c"
     ]
     ignoredNames: [
       "spec/fixtures"
@@ -72,11 +80,6 @@
     showErrorTabLine: true
     showErrorTabProject: false
     statusBar: "None"
-  "linter-eslint":
-    disableWhenNoEslintConfig: false
-    eslintrcPath: "/users/ayu/.eslintrc"
-    globalNodePath: "/Users/ayu/.nvm/versions/node/v6.2.1"
-    useGlobalEslint: true
   "linter-jscs": {}
   "linter-jshint": {}
   "linter-rubocop":
