@@ -1,45 +1,70 @@
-'global':
-  'remember-window':
-    'x': 0
-    'y': 23
-    'width': 1200
-    'height': 877
-    'treeWidth': 0
-  'exception-reporting':
-    'userId': 'f1c26ec2-08ea-658c-5088-57d8474c304a'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': 'a31c93103d5069ba7ca99872a67d00a79adcac8f'
-  'remember-session':
-    'x': 0
-    'y': 23
-    'tabs': ''
-    'selectedTab': ''
-    'width': 1200
-    'height': 877
-    'path': ''
-  'editor':
-    'fontFamily': 'Source Code Pro'
-    'lineHeight': 1.6
-    'showIndentGuide': true
-    'showInvisibles': true
-    'softWrap': true
-    'fontSize': 10
-  'core':
-    'themes': [
-      'seti-ui'
-      'monokai'
+"*":
+  autosave:
+    enabled: true
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "status-bar"
+      "language-gfm"
+      "space-tab"
+      "welcome"
+      "language-coffee-script"
+      "language-clojure"
+      "language-csharp"
+      "language-java"
+      "language-php"
+      "language-perl"
+      "language-mustache"
+      "language-toml"
+      "metrics"
+      "spell-check"
+      "keybinding-resolver"
+      "command-palette"
+      "background-tips"
+      "autoflow"
+      "autocomplete-atom-api"
+      "autocomplete-css"
+      "autocomplete-html"
+      "autocomplete-plus"
+      "autocomplete-snippets"
+      "archive-view"
     ]
-    'audioBeep': false
-    'disabledPackages': [
-      'status-bar'
+    telemetryConsent: "no"
+    themes: [
+      "seti-ui"
+      "tinacious-design-syntax"
     ]
-  'autosave':
-    'enabled': true
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-    'ensureSingleTrailingNewline': false
-  'tree-view':
-    'hideVcsIgnoredFiles': true
-    'showOnRightSide': true
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 13
+    lineHeight: 1.6
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "f1c26ec2-08ea-658c-5088-57d8474c304a"
+  metrics:
+    userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
+  "remember-session":
+    height: 877
+    path: ""
+    selectedTab: ""
+    tabs: ""
+    width: 1200
+    x: 0
+    y: 23
+  "remember-window":
+    height: 877
+    treeWidth: 0
+    width: 1200
+    x: 0
+    y: 23
+  "seti-ui":
+    themeColor: "Pink"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    showOnRightSide: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    ignoreWhitespaceOnCurrentLine: false

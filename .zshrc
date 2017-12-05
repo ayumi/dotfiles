@@ -131,13 +131,13 @@ man() {
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Use GNU coreutils
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+#export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+#export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # apple + java poopy
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+#export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-source $HOME/.sh_fn
+#source $HOME/.sh_fn
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -148,51 +148,34 @@ source $HOME/.sh_fn
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.sh_aliases
-source $HOME/.sh_aliases_private
+#source $HOME/.sh_aliases_private
 
 # RVM
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Golang
 export GOPATH="$HOME/go"
 export PATH="$PATH:$HOME/go/bin"
 
 # fleet
-export FLEETCTL_ENDPOINT="http://127.0.0.1:4001"
+#export FLEETCTL_ENDPOINT="http://127.0.0.1:4001"
 
 # cert.pem file for openssl
 # export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 
 
-export PATH=/Users/ayu/torch/install/bin:$PATH  # Added automatically by torch-dist
-export LD_LIBRARY_PATH=/Users/ayu/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
-export DYLD_LIBRARY_PATH=/Users/ayu/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
-
 # perl lol
 # source ~/perl5/perlbrew/etc/bashrc
 
-# docker
-#export DOCKER_TLS_VERIFY="1"
-#export DOCKER_HOST="tcp://192.168.99.100:2376"
-#export DOCKER_CERT_PATH="/Users/ayu/.docker/machine/machines/alice"
-#export DOCKER_MACHINE_NAME="alice"
-
-# fucking homebrew
-export HOMEBREW_NO_ANALYTICS=1
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/ayu/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-#source '/Users/ayu/google-cloud-sdk/completion.zsh.inc'
 
 export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
-source '/Users/ayu/.nvm/nvm.sh'
-
-# Docker version manager
-[[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

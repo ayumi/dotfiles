@@ -72,7 +72,9 @@ hardstatus alwayslastline
 #hardstatus string '%{= kG}%= %{=kw}%?%-Lw%?%{r}(%{W}%n:%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}[ %{G}%l | %{G}%2`%{g} G ]'
 #hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
 #hardstatus alwayslastline '%{= G}[ %l | %{G}%2`%{g} G ] %= %{= w}%-w%{+b g}%n*%t%{-b g}%{w}%+w %= '
-hardstatus alwayslastline '%{= G}[ %l | %{G}%2`%{g} G ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
+#hardstatus alwayslastline '%{= G}[ %l | %{G}%2`%{g} G ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
+# disable free disk , encrypted disks are funny
+hardstatus alwayslastline '%{= G}[ %l ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
 
 defflow off
 

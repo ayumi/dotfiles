@@ -1,15 +1,15 @@
 /*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
- *
- * If you are unfamiliar with LESS, you can read more about it here:
- * http://www.lesscss.org
- */
+* Your Stylesheet
+*
+* This stylesheet is loaded when Atom starts up and is reloaded automatically
+* when it is changed.
+*
+* If you are unfamiliar with LESS, you can read more about it here:
+* http://www.lesscss.org
+*/
 
-* {
-  font-family: 'Fira Sans' !important;
+atom-workspace {
+  font-family: 'Fira Sans';
 }
 
 // Editor General
@@ -18,9 +18,8 @@
   background-color: rgba(0, 131, 54, 0.33) !important;
 }
 
-.editor {
+atom-text-editor {
   background: rgb(10, 10, 10) !important;
-  font-family: 'Source Code Pro' !important;
 }
 
 .gutter {
@@ -225,7 +224,7 @@ nth-child mixin
 .tree-view-resizer {
   // width: 100% !important;
 
-.tree-view-resize-handle {
+  .tree-view-resize-handle {
     background: #202020;
   }
 }
