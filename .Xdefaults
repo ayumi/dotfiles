@@ -16,7 +16,7 @@ Xft.hintstyle:              hintfull
 !-------------------------------------------------------------------------------
 
 URxvt.depth:                32
-URxvt.geometry:             92x42
+URxvt.geometry:             92x40
 URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
@@ -25,6 +25,8 @@ URxvt.loginShell:           true
 URxvt.saveLines:            12000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
+URxvt.iso14755:	false
+URxvt.iso14755_52:	false
 
 ! Fonts
 URxvt.allow_bold:           false
@@ -58,37 +60,37 @@ URxvt.pointerBlank:         true
 
 ! tabbedex is not provided by default (Debian/Ubuntu)
 ! put it in ~/.urxvt/
-URxvt.perl-lib: .urxvt/
-URxvt.perl-ext-common: default,matcher,tabbedex
+! URxvt.perl-lib: .urxvt/
+! URxvt.perl-ext-common: default,matcher,tabbedex
 
 ! Tabs: gray background, ~white text
 ! and the opposite for the currently focused tab
-URxvt.tabbed.tabbar-fg: 7
-URxvt.tabbed.tabbar-bg: 8
-URxvt.tabbed.tab-fg: 8
-URxvt.tabbed.tab-bg: 7
+!URxvt.tabbed.tabbar-fg: 7
+!URxvt.tabbed.tabbar-bg: 8
+!URxvt.tabbed.tab-fg: 8
+!URxvt.tabbed.tab-bg: 7
 
 ! Display the title of terminal next to tabs list
-URxvt.tabbed.title: true
-URxvt.tabbed.title-bg: 8
-URxvt.tabbed.title-fg: 7
+!URxvt.tabbed.title: true
+!URxvt.tabbed.title-bg: 8
+!URxvt.tabbed.title-fg: 7
 
 
 #################################
 # Color settings (Solarized dark)
 #################################
 
-*background: #002929
-*foreground: #afcfcf
+*background: #000501
+*foreground: #afcf9f
 !!*fading: 40
-*fadeColor: #002b36
-*cursorColor: #93a1a1
-*pointerColorBackground: #586e75
+*fadeColor: #003b26
+*cursorColor: #93c191
+*pointerColorBackground: #58756e
 *pointerColorForeground: #93a1a1
 
 !! black dark/light
-*color0: #073642
-*color8: #002b36
+*color0: #074206
+*color8: #00362b
 
 !! red dark/light
 *color1: #dc322f
@@ -96,7 +98,7 @@ URxvt.tabbed.title-fg: 7
 
 !! green dark/light
 *color2: #859900
-*color10: #586e75
+*color10: #58756e
 
 !! yellow dark/light
 *color3: #b58900

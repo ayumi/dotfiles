@@ -25,7 +25,7 @@ alias esstart17="echo Starting es 1.7.5; /usr/local/Cellar/elasticsearch17/1.7.5
 alias esstart="echo Starting es; elasticsearch -d --config=/Users/ayu/elasticsearch.yml"
 alias esstop="curl -XPOST 'http://0.0.0.0:9200/_shutdown'"
 # alias gemsize=rubygemsize
-alias p="python"
+alias p="pass --clip "
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstart="/usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main -l ~/postgresql-10.log start"
 alias pgstop="echo Stopping postgres; pg_ctl -D /usr/local/var/postgres stop -s -m fast"
