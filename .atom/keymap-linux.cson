@@ -45,6 +45,6 @@
   'ctrl-shift-n': 'fuzzy-finder:toggle-file -finder'
   'alt-1': 'tree-view:toggle'
   'ctrl-n': 'tree-view:add-file'
-
-'.platform-linux':
+  'ctrl-f': 'project-find:toggle'
+  'alt-f': 'find-and-replace:toggle'
   'alt-t': 'fuzzy-finder:toggle-file-finder'

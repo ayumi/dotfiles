@@ -20,7 +20,7 @@ URxvt.geometry:             149x39
 URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
+URxvt.visualBell:           false
 URxvt.loginShell:           true
 URxvt.saveLines:            12000
 URxvt.internalBorder:       3
