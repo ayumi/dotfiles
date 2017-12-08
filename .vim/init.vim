@@ -1,1 +1,1 @@
-/home/user/repos/github.com/ayumi/dotfiles/.vim/.vimrc
+.vimrc
