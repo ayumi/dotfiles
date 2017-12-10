@@ -80,8 +80,8 @@ URxvt.pointerBlank:         true
 # Color settings (Solarized dark)
 #################################
 
-*background: #000501
-*foreground: #afcf9f
+*background: #000000
+*foreground: #00ff20
 !!*fading: 40
 *fadeColor: #003b26
 *cursorColor: #93c191
@@ -89,33 +89,33 @@ URxvt.pointerBlank:         true
 *pointerColorForeground: #93a1a1
 
 !! black dark/light
-*color0: #074206
+*color0: #000000
 *color8: #00362b
 
 !! red dark/light
 *color1: #dc322f
-*color9: #cb4b16
+*color9: #fb4b16
 
 !! green dark/light
-*color2: #859900
-*color10: #58756e
+*color2: #00b900
+*color10: #58ff6e
 
 !! yellow dark/light
-*color3: #b58900
-*color11: #657b83
+*color3: #d5a900
+*color11: #e5fb83
 
 !! blue dark/light
-*color4: #268bd2
-*color12: #839496
+*color4: #164bd2
+*color12: #5374ff
 
 !! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
+*color5: #d336a2
+*color13: #ff61e4
 
 !! cyan dark/light
-*color6: #2aa198
-*color14: #93a1a1
+*color6: #2ac1b8
+*color14: #00ffff
 
 !! white dark/light
 *color7: #eee8d5
-*color15: #fdf6e3
+*color15: #ffffff
