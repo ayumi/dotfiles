@@ -74,7 +74,9 @@ hardstatus alwayslastline
 #hardstatus alwayslastline '%{= G}[ %l | %{G}%2`%{g} G ] %= %{= w}%-w%{+b g}%n*%t%{-b g}%{w}%+w %= '
 #hardstatus alwayslastline '%{= G}[ %l | %{G}%2`%{g} G ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
 # disable free disk , encrypted disks are funny
-hardstatus alwayslastline '%{= G}[ %l ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
+#hardstatus alwayslastline '%{= G}[ %l ]  %{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
+# disable load, VM specific load is not useful
+hardstatus alwayslastline '%{= w}%-w%{+b y}%n*%t%{-b y}%{w}%+w %= '
 
 defflow off
 

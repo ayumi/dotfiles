@@ -45,33 +45,10 @@ ZSH_THEME="cute"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(screen wd zsh-autosuggestions)
+plugins=(wd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt AUTO_CD
-
-# Keypad
-# 0 . Enter
-bindkey -s "^[Op" "0"
-bindkey -s "^[Ol" "."
-bindkey -s "^[OM" "^M"
-# 1 2 3
-bindkey -s "^[Oq" "1"
-bindkey -s "^[Or" "2"
-bindkey -s "^[Os" "3"
-# 4 5 6
-bindkey -s "^[Ot" "4"
-bindkey -s "^[Ou" "5"
-bindkey -s "^[Ov" "6"
-# 7 8 9
-bindkey -s "^[Ow" "7"
-bindkey -s "^[Ox" "8"
-bindkey -s "^[Oy" "9"
-# + -  * /
-bindkey -s "^[Ok" "+"
-bindkey -s "^[Om" "-"
-bindkey -s "^[Oj" "*"
-bindkey -s "^[Oo" "/"
 
 # User configuration
 
@@ -89,14 +66,13 @@ bindkey -s "^[Oo" "/"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 export VISUAL=nvim
-export EDITOR="$VISUAL"
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Enable vim mode
 #bindkey -v
@@ -127,17 +103,9 @@ man() {
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Use GNU coreutils
-#export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-#export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-
 # apple + java poopy
 #export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-#source $HOME/.sh_fn
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -145,37 +113,32 @@ man() {
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.sh_aliases
 #source $HOME/.sh_aliases_private
-
-# RVM
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Golang
-export GOPATH="$HOME/go"
-export PATH="$PATH:$HOME/go/bin"
-
-# fleet
-#export FLEETCTL_ENDPOINT="http://127.0.0.1:4001"
+#source $HOME/.sh_fn
 
 # cert.pem file for openssl
 # export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 
+# Language specific things
 
-# perl lol
-# source ~/perl5/perlbrew/etc/bashrc
-
+export GOPATH="$HOME/go"
+export PATH="$PATH:$HOME/go/bin"
 
 export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
+if [ -d "$HOME/.pyenv" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin/:$PATH"
+  if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+fi
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+if [ -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi

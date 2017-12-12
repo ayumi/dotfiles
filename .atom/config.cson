@@ -43,6 +43,7 @@
     softWrap: true
   "exception-reporting":
     userId: "f1c26ec2-08ea-658c-5088-57d8474c304a"
+  "linter-rubocop": {}
   metrics:
     userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
   "remember-session":
