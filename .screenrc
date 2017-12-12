@@ -24,7 +24,7 @@ escape ^@@
 # don't display the copyright page
   startup_message       off             # default: on
 # no annoying audible bell, please
-  vbell                 on
+  vbell                 off
 
 
 # if we accidentally hangup, don't be all attached when we come back. 
