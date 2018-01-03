@@ -42,9 +42,7 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+URxvt.perl-ext-common:      "default, -searchable-scrollback"
 
 ! Cursor
 URxvt.cursorBlink:          false

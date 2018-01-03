@@ -63,8 +63,9 @@
   "seti-ui":
     themeColor: "Pink"
   "tree-view":
+    alwaysOpenExisting: true
     hideVcsIgnoredFiles: true
-    showOnRightSide: true
+    showOnRightSide: false
   welcome:
     showOnStartup: false
   whitespace:

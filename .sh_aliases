@@ -6,10 +6,8 @@ alias be="bundle exec"
 alias bd="boot2docker"
 alias brewup="brew update && brew upgrade --all"
 alias c="clear"
-alias xi="xclip -selection c"
-alias xo="xclip -selection c -o"
 alias d="docker"
-alias dc="docker-compose"
+alias docker-compose="/home/user/apps/docker-compose/latest"
 alias dgc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock spotify/docker-gc"
 alias dm="docker-machine"
 alias dviz="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
@@ -39,6 +37,16 @@ alias s="screen"
 alias terraform="/home/user/apps/terraform/latest"
 alias tf="terraform"
 alias vim="nvim"
+alias xi="xclip -selection c"
+alias xo="xclip -selection c -o"
+function clipswap(){
+  CLIP_P=$(xsel -p)
+  CLIP_C=$(xsel -b)
+  echo "$CLIP_P" | xsel -b
+  echo "$CLIP_C" | xsel -p
+  printf "Primary: %d bytes / Clipboard: %d bytes" ${#CLIP_C} ${#CLIP_P}
+}
+alias xs="clipswap"
 alias yolochrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security &"
 function ytdl(){
   youtube-dl --rm-cache-dir -x --audio-quality 0 --prefer-free-formats -f '(bestaudio/best)[protocol^=http]' --external-downloader aria2c --external-downloader-args="--file-allocation=none -c -x 10 -s 10" $1
@@ -55,6 +63,8 @@ alias gco="git checkout"
 alias gd="git diff"
 alias gdlist="git diff master --stat"
 alias gf="git fetch"
+function gfp(){ git fetch origin "pull/$1/head:$1" }
+alias gfp="gfp"
 alias gg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold green)%h%C(reset) %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gl="git log"
 alias glist="git for-each-ref --format='[%(authordate:short)] %(refname:short) :: %(subject)' --sort=authordate refs/heads/"

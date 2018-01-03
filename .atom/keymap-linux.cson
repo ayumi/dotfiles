@@ -48,3 +48,4 @@
   'alt-f': 'project-find:toggle'
   'ctrl-f': 'find-and-replace:toggle'
   'alt-t': 'fuzzy-finder:toggle-file-finder'
+  'alt-k': 'fuzzy-finder:toggle-file-finder'
