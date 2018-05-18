@@ -1,6 +1,9 @@
 "*":
   autosave:
     enabled: true
+  "better-git-blame":
+    searchInLayerEnabled: false
+    sendUsageStatistics: false
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -29,23 +32,32 @@
       "autocomplete-plus"
       "autocomplete-snippets"
       "archive-view"
+      "linter-rubocop"
     ]
     telemetryConsent: "no"
     themes: [
-      "seti-ui"
+      "one-dark-ui"
       "tinacious-design-syntax"
     ]
+    useTreeSitterParsers: true
   editor:
     fontFamily: "Source Code Pro"
-    fontSize: 13
+    fontSize: 16
     lineHeight: 1.6
     showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "f1c26ec2-08ea-658c-5088-57d8474c304a"
+  "git-blame":
+    colorCommitAuthors: true
+    columnWidth: 260
+    ignoreWhiteSpaceDiffs: true
   "linter-rubocop": {}
   metrics:
     userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
+  "one-dark-ui":
+    fontSize: 16
+    hideDockButtons: true
   "remember-session":
     height: 877
     path: ""
@@ -61,6 +73,8 @@
     x: 0
     y: 23
   "seti-ui":
+    displayIgnored: false
+    fileIcons: false
     themeColor: "Pink"
   "tree-view":
     alwaysOpenExisting: true
@@ -71,3 +85,6 @@
   whitespace:
     ensureSingleTrailingNewline: false
     ignoreWhitespaceOnCurrentLine: false
+".jsdoc.source":
+  editor:
+    tabType: "soft"

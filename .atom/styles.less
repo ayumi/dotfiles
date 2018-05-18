@@ -8,6 +8,10 @@
 * http://www.lesscss.org
 */
 
+atom-panel-container.left, atom-panel.tool-panel, .fuzzy-finder {
+  zoom: 125%;
+}
+
 atom-workspace {
   font-family: 'Fira Sans';
 }
@@ -130,8 +134,8 @@ nth-child mixin
 
 .tab-bar .tab {
   // border-bottom-width: 4px;
-  height: 26px !important;
-  line-height: 26px !important;
+  height: 32px !important;
+  line-height: 32px !important;
   min-width: 0;
   padding: 0 !important;
   transition: none !important;
@@ -146,14 +150,14 @@ nth-child mixin
     right: 9px !important;
   }
   .title {
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0;
     margin-top: 0 !important;
   }
   .title:before {
     // width: 10px !important;
-    height: 26px !important;
-    line-height: 26px !important;
+    height: 32px !important;
+    line-height: 32px !important;
   }
 }
 
@@ -217,9 +221,11 @@ nth-child mixin
   }
 }
 
-.results-view .list-group .selected:before,
+.results-view {
+  .list-group .selected:before,
 .list-group .selected::before, .list-tree .selected::before {
-  background-color: hsla(341,40%,40%,1) !important;
+    background-color: hsla(341,40%,40%,1) !important;
+  }
 }
 
 .tree-view-resizer {
@@ -305,7 +311,7 @@ nth-child mixin
       margin-bottom: 0 !important;
     }
     .path-details * {
-      font-size: 12px !important;
+      font-size: 16px !important;
     }
     .list-item {
       padding: 0 5px !important;

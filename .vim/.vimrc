@@ -11,8 +11,7 @@ set backspace=2
 set number
 
 set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
+colorscheme monokai
 
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus

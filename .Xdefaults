@@ -2,7 +2,7 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:                    96
+Xft.dpi:                    176
 Xft.antialias:              false
 Xft.rgba:                   rgb
 Xft.hinting:                true
@@ -16,7 +16,7 @@ Xft.hintstyle:              hintfull
 !-------------------------------------------------------------------------------
 
 URxvt.depth:                32
-URxvt.geometry:             149x39
+URxvt.geometry:             86x44
 URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
@@ -31,8 +31,8 @@ URxvt.iso14755_52:	false
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Source Code Pro:pixelsize=14
-URxvt*boldFont: xft:Source Code Pro:pixelsize=14
+URxvt*font: xft:Source Code Pro:pixelsize=18
+URxvt*boldFont: xft:Source Code Pro:pixelsize=18
 
 ! Fix font space
 URxvt*letterSpace: -1
@@ -88,7 +88,7 @@ URxvt.pointerBlank:         true
 
 !! black dark/light
 *color0: #000000
-*color8: #00362b
+*color8: #007660
 
 !! red dark/light
 *color1: #dc322f
