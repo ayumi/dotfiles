@@ -42,7 +42,7 @@
     useTreeSitterParsers: true
   editor:
     fontFamily: "Source Code Pro"
-    fontSize: 16
+    fontSize: 19
     lineHeight: 1.6
     showInvisibles: true
     softWrap: true
@@ -52,7 +52,8 @@
     colorCommitAuthors: true
     columnWidth: 260
     ignoreWhiteSpaceDiffs: true
-  "linter-rubocop": {}
+  "linter-rubocop":
+    command: "/home/user/.rbenv/shims/rubocop"
   metrics:
     userId: "a31c93103d5069ba7ca99872a67d00a79adcac8f"
   "one-dark-ui":

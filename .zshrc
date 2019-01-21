@@ -123,7 +123,7 @@ source $HOME/.sh_aliases
 # Language specific things
 
 export GOPATH="$HOME/go"
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
 pyenv() {
